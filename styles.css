@@ -1,0 +1,445 @@
+:root {
+    --primary-red: #e11d48;
+    --primary-blue: #1e3a8a;
+    --gold: #d97706;
+    --whatsapp-green: #22c55e;
+    --whatsapp-hover: #16a34a;
+    --bg-dark: #0f172a;
+    --bg-light: #f8fafc;
+    --text-dark: #0f172a;
+    --text-light: #f1f5f9;
+    --text-muted: #64748b;
+    --max-width: 1200px;
+}
+
+/* Reset Global */
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--primary-red);
+    z-index: 1000; 
+    padding: 15px 20px;
+}
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.logo { 
+    color: white; 
+    font-size: 1.5rem; 
+    font-weight: 800; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+}
+.logo span { 
+    color: var(--primary-red); 
+}
+.nav-menu a { 
+    color: #94a3b8; 
+    text-decoration: none; 
+    font-weight: 600; 
+    margin-left: 20px; 
+}
+
+/* BOTÓN FLOTANTE DE WHATSAPP */
+.btn-whatsapp-flotante {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;
+    background-color: var(--whatsapp-green); 
+    color: white;
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    z-index: 2000; 
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-whatsapp-flotante .texto-boton { 
+    display: none; 
+}
+.btn-whatsapp-flotante .icon-whatsapp { 
+    width: 32px; 
+    height: 32px; 
+}
+.btn-whatsapp-flotante:hover { 
+    background-color: var(--whatsapp-hover); 
+    transform: scale(1.08); 
+}
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    padding: 150px 20px 100px 20px;
+    background-color: #0b1329;
+    background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover; 
+    background-position: center;
+    text-align: center; 
+    color: white; 
+    min-height: 85vh;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.hero-overlay {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.98));
+    z-index: 1;
+}
+.hero-content { 
+    position: relative; 
+    z-index: 2; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.perfil-contenedor {
+    width: 140px; 
+    height: 140px; 
+    margin: 0 auto 25px auto;
+    border-radius: 50%; 
+    padding: 4px;
+    background: linear-gradient(135deg, var(--primary-red), var(--gold));
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+.foto-principal { 
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    background: white; 
+}
+
+.hero-content h1 { 
+    font-size: 3rem; 
+    font-weight: 800; 
+    margin-bottom: 20px; 
+}
+.text-vibrante { 
+    background: linear-gradient(135deg, #f43f5e, var(--gold)); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+/* MODIFICADO: AJUSTE DE ESPACIADO INFERIOR POR REMOCIÓN DE BOTONES */
+.hero-content .lead { 
+    font-size: 1.15rem; 
+    color: #94a3b8; 
+    margin-bottom: 10px; 
+    line-height: 1.7; 
+}
+.hero-botones { 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    flex-wrap: wrap; 
+}
+
+.btn-action { 
+    padding: 14px 28px; 
+    border-radius: 12px; 
+    font-weight: 700; 
+    text-decoration: none; 
+    font-size: 1rem; 
+    display: inline-block; 
+}
+
+.btn-proximamente-shows {
+    background-color: #27272a;
+    color: #a1a1aa;
+    border: 1px dashed #52525b;
+    cursor: not-allowed;
+}
+.btn-linea { 
+    border: 2px solid #475569; 
+    color: white; 
+}
+
+/* SECCIONES COMPARTIDAS */
+.section-container { 
+    max-width: var(--max-width); 
+    margin: 0 auto; 
+    padding: 80px 20px; 
+}
+.section-title { 
+    font-size: 2.2rem; 
+    font-weight: 800; 
+    text-align: center; 
+    margin-bottom: 10px; 
+}
+.section-title.blanco { 
+    color: white; 
+}
+.section-subtitle { 
+    text-align: center; 
+    color: var(--text-muted); 
+    margin-bottom: 50px; 
+}
+.section-subtitle.gris { 
+    color: #94a3b8; 
+}
+
+/* ESTRUCTURA TARJETAS GIRATORIAS (FLIP CARDS) */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    perspective: 1000px;
+}
+
+.flip-card {
+    background-color: transparent;
+    height: 380px;
+    border-radius: 20px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+
+/* Hover en Computadora */
+@media (hover: hover) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    z-index: 2;
+}
+
+/* Contenedor translúcido frontal */
+.front-content {
+    z-index: 3;
+    background: rgba(15, 23, 42, 0.6);
+    padding: 25px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+    width: 88%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    justify-content: center;  
+    gap: 5px;
+}
+
+/* LOGOS PNG - REGLA BASE */
+.logo-servicio-png {
+    width: auto;              /* Mantiene la proporción */
+    max-width: 90%;           
+    object-fit: contain;      
+    margin-bottom: 12px;      
+    filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.45)); 
+    display: block;
+}
+
+/* MODIFICADO: AJUSTES CALIBRADOS MEDIANOS PARA SIMETRÍA VISUAL */
+.logo-patron-card {
+    height: 115px;            
+}
+
+.logo-spiderman-card {
+    height: 100px;            
+}
+
+.flip-card-back {
+    background-color: #ffffff;
+    color: #0f172a;
+    transform: rotateY(180deg);
+    border: 2px solid #e2e8f0;
+    z-index: 1;
+}
+.flip-card-back p { 
+    font-size: 1rem; 
+    color: #334155; 
+    line-height: 1.5; 
+    margin-bottom: 25px; 
+}
+
+/* ESTILOS DE TIPOGRAFÍAS PERSONALIZADAS */
+
+/* 1. Estilo Divertido / Cómic (Entregas del Patrón) */
+.titulo-patron {
+    font-family: 'Bangers', cursive, sans-serif;
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.flip-card-front .titulo-patron {
+    color: #f59e0b; 
+    text-shadow: 2px 2px 0px #000;
+}
+.flip-card-back .titulo-patron {
+    color: #d97706;
+    margin-bottom: 12px;
+}
+
+/* 2. Estilo Arácnido / Tecnológico (Spider-Man) */
+.titulo-spiderman {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+.flip-card-front .titulo-spiderman {
+    color: #e11d48; 
+    text-shadow: 0 0 10px rgba(225, 29, 72, 0.6), 2px 2px 2px rgba(0,0,0,0.8);
+}
+.flip-card-back .titulo-spiderman {
+    color: #1e3a8a; 
+    margin-bottom: 15px;
+}
+
+/* BOTÓN DE COBERTURA TOTAL */
+.btn-container-dinamico {
+    display: inline-block;
+    background-color: #1a1a1a;
+    border-radius: 50px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: auto;
+    overflow: hidden;
+}
+.btn-container-dinamico:hover {
+    background-color: #2b2b2b;
+    transform: scale(1.03);
+}
+.btn-link-externo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 14px 28px;
+    width: 100%;
+    height: 100%;
+}
+
+/* CONTENEDOR MULTI-BOTÓN REVERSO */
+.opciones-tarjeta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+}
+
+/* SECCIONES SECUNDARIAS */
+.retos-section { 
+    background-color: var(--bg-dark); 
+    text-align: center; 
+}
+.badge-proximamente { 
+    display: inline-block; 
+    background-color: #fef3c7; 
+    color: #b45309; 
+    font-weight: 700; 
+    padding: 6px 14px; 
+    border-radius: 30px; 
+    margin-bottom: 15px; 
+}
+.sitio-footer { 
+    background-color: #0b1329; 
+    color: white; 
+    text-align: center; 
+    padding: 40px 20px; 
+}
+
+/* MEDIA QUERIES (RESPONSIVE) */
+@media (min-width: 768px) {
+    .grid-servicios { 
+        grid-template-columns: 1fr 1fr; 
+    }
+    .hero-content h1 { 
+        font-size: 4rem; 
+    }
+    
+    .btn-whatsapp-flotante {
+        bottom: 30px; 
+        right: 30px; 
+        width: auto; 
+        height: auto;
+        padding: 14px 24px; 
+        border-radius: 50px; 
+        gap: 10px;
+    }
+    .btn-whatsapp-flotante .texto-boton { 
+        display: inline-block; 
+        font-weight: 700; 
+    }
+    .btn-whatsapp-flotante .icon-whatsapp { 
+        width: 26px; 
+        height: 26px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-menu { 
+        display: none; 
+    }
+    
+    /* Activa giro por click en celulares */
+    .flip-card.click .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+}
