@@ -116,11 +116,13 @@ body {
     background: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.98));
     z-index: 1;
 }
+
 .hero-content { 
     position: relative; 
     z-index: 2; 
-    max-width: 800px; 
+    max-width: 700px; /* Ajustado para mejor legibilidad */
     margin: 0 auto; 
+    padding: 0 20px;
 }
 
 .perfil-contenedor {
@@ -143,46 +145,21 @@ body {
 .hero-content h1 { 
     font-size: 3rem; 
     font-weight: 800; 
-    margin-bottom: 20px; 
+    margin-bottom: 5px; 
 }
+
+.hero-content .lead { 
+    font-size: 1.1rem; 
+    color: #cbd5e1; 
+    line-height: 1.6; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .text-vibrante { 
     background: linear-gradient(135deg, #f43f5e, var(--gold)); 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
-}
-
-/* MODIFICADO: AJUSTE DE ESPACIADO INFERIOR POR REMOCIÓN DE BOTONES */
-.hero-content .lead { 
-    font-size: 1.15rem; 
-    color: #94a3b8; 
-    margin-bottom: 10px; 
-    line-height: 1.7; 
-}
-.hero-botones { 
-    display: flex; 
-    justify-content: center; 
-    gap: 15px; 
-    flex-wrap: wrap; 
-}
-
-.btn-action { 
-    padding: 14px 28px; 
-    border-radius: 12px; 
-    font-weight: 700; 
-    text-decoration: none; 
-    font-size: 1rem; 
-    display: inline-block; 
-}
-
-.btn-proximamente-shows {
-    background-color: #27272a;
-    color: #a1a1aa;
-    border: 1px dashed #52525b;
-    cursor: not-allowed;
-}
-.btn-linea { 
-    border: 2px solid #475569; 
-    color: white; 
 }
 
 /* SECCIONES COMPARTIDAS */
@@ -236,7 +213,6 @@ body {
     border-radius: 20px;
 }
 
-/* Hover en Computadora */
 @media (hover: hover) {
     .flip-card:hover .flip-card-inner {
         transform: rotateY(180deg);
@@ -264,7 +240,6 @@ body {
     z-index: 2;
 }
 
-/* Contenedor translúcido frontal */
 .front-content {
     z-index: 3;
     background: rgba(15, 23, 42, 0.6);
@@ -275,29 +250,22 @@ body {
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;      
-    justify-content: center;  
+    align-items: center;       
+    justify-content: center;   
     gap: 5px;
 }
 
-/* LOGOS PNG - REGLA BASE */
 .logo-servicio-png {
-    width: auto;              /* Mantiene la proporción */
-    max-width: 90%;           
-    object-fit: contain;      
-    margin-bottom: 12px;      
+    width: auto;            
+    max-width: 90%;          
+    object-fit: contain;     
+    margin-bottom: 12px;     
     filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.45)); 
     display: block;
 }
 
-/* MODIFICADO: AJUSTES CALIBRADOS MEDIANOS PARA SIMETRÍA VISUAL */
-.logo-patron-card {
-    height: 115px;            
-}
-
-.logo-spiderman-card {
-    height: 100px;            
-}
+.logo-patron-card { height: 115px; }
+.logo-spiderman-card { height: 100px; }
 
 .flip-card-back {
     background-color: #ffffff;
@@ -313,9 +281,6 @@ body {
     margin-bottom: 25px; 
 }
 
-/* ESTILOS DE TIPOGRAFÍAS PERSONALIZADAS */
-
-/* 1. Estilo Divertido / Cómic (Entregas del Patrón) */
 .titulo-patron {
     font-family: 'Bangers', cursive, sans-serif;
     font-size: 2.1rem;
@@ -331,7 +296,6 @@ body {
     margin-bottom: 12px;
 }
 
-/* 2. Estilo Arácnido / Tecnológico (Spider-Man) */
 .titulo-spiderman {
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
@@ -348,7 +312,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* BOTÓN DE COBERTURA TOTAL */
 .btn-container-dinamico {
     display: inline-block;
     background-color: #1a1a1a;
@@ -356,6 +319,7 @@ body {
     transition: background-color 0.2s ease, transform 0.1s ease;
     width: auto;
     overflow: hidden;
+    margin: 5px 0;
 }
 .btn-container-dinamico:hover {
     background-color: #2b2b2b;
@@ -372,19 +336,16 @@ body {
     font-size: 0.95rem;
     padding: 14px 28px;
     width: 100%;
-    height: 100%;
 }
 
-/* CONTENEDOR MULTI-BOTÓN REVERSO */
 .opciones-tarjeta-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 5px;
     width: 100%;
     align-items: center;
 }
 
-/* SECCIONES SECUNDARIAS */
 .retos-section { 
     background-color: var(--bg-dark); 
     text-align: center; 
@@ -413,7 +374,6 @@ body {
     .hero-content h1 { 
         font-size: 4rem; 
     }
-    
     .btn-whatsapp-flotante {
         bottom: 30px; 
         right: 30px; 
@@ -437,8 +397,6 @@ body {
     .nav-menu { 
         display: none; 
     }
-    
-    /* Activa giro por click en celulares */
     .flip-card.click .flip-card-inner {
         transform: rotateY(180deg);
     }
