@@ -1,26 +1,111 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>web_ronmel</title>
+    <title>Ronmel Torres | Sitio Oficial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@700;900&family=Segoe+UI:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">Ronmel<span>Torres</span></a>
+            <nav class="nav-menu">
+                <a href="#inicio">Sobre mí</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#retos">Retos urbanos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <a href="https://wa.me/593987828173?text=Hola%20Ronmel,%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n." target="_blank" class="btn-whatsapp-flotante" aria-label="Contactar por WhatsApp">
+        <svg class="icon-whatsapp" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.004 2c-5.523 0-10 4.477-10 10a9.957 9.957 0 0 0 1.34 4.975L2 22l5.166-1.355A9.954 9.954 0 0 0 12.004 22c5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 1.5c4.694 0 8.5 3.806 8.5 8.5s-3.806 8.5-8.5 8.5c-1.616 0-3.123-.453-4.414-1.233l-.317-.192-3.076.807.821-3.003-.211-.336A8.455 8.455 0 0 1 3.504 12c0-4.694 3.806-8.5 8.5-8.5zm-3.642 4.496c-.16 0-.348.061-.51.229-.214.221-.767.749-.767 1.824 0 1.076.784 2.115.891 2.264.107.149 1.511 2.417 3.712 3.287.524.207.933.33z"/>
+        </svg>
+        <span class="texto-boton">Contáctame</span>
+    </a>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="perfil-contenedor">
+                <img src="tu-foto-personal.jpg" alt="Ronmel Torres" class="foto-principal" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80'">
+            </div>
+            <h1>Ronmel Torres <br><span class="text-vibrante">Experiencias Épicas</span></h1>
+            <p class="lead">¡Hola! Soy Ronmel Torres. Me dedico a crear experiencias llenas de energía y diversión. Actualmente ofrezco sesiones fotográficas profesionales temáticas y las auténticas entregas sorpresas a domicilio.</p>
+        </div>
+    </section>
+
+    <section id="servicios" class="servicios-section">
+        <div class="section-container">
+            <h2 class="section-title">Mis Servicios Activos</h2>
+            <p class="section-subtitle">Toca la tarjeta en tu celular o pasa el cursor en PC para ver los detalles.</p>
+            
+            <div class="grid-servicios">
+                
+                <div class="flip-card" onclick="this.classList.toggle('click')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('fotos-patron.png');">
+                            <div class="front-content">
+                                <img src="logo-patron.png" alt="Logo Patrón" class="logo-servicio-png logo-patron-card" onerror="this.style.display='none'">
+                                <h3 class="titulo-patron">Entregas del Patrón</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 class="titulo-patron">Entregas del Patrón</h3>
+                            <p>Sorpresas de alto impacto a domicilio llenas de ritmo, confeti y la máxima energía para el festejado.</p>
+                            <div class="opciones-tarjeta-container">
+                                <div class="btn-container-dinamico">
+                                    <a href="https://www.tiktok.com/@jessica_paola1304/video/7640209332415646997?is_from_webapp=1" target="_blank" class="btn-link-externo">Anclado: 🎬 Ver videos</a>
+                                </div>
+                                <div class="btn-container-dinamico">
+                                    <a href="https://photos.app.goo.gl/ovxzSGqdCSez5H5J7" target="_blank" class="btn-link-externo">Anclado: 📷 Ver ejemplos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="this.classList.toggle('click')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('fotos-spiderman.png');">
+                            <div class="front-content">
+                                <img src="logo-spiderman.png" alt="Logo Spider-Man" class="logo-servicio-png logo-spiderman-card" onerror="this.style.display='none'">
+                                <h3 class="titulo-spiderman">Fotos con Spider-Man</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 class="titulo-spiderman">Sesiones Fotográficas</h3>
+                            <p>Presencia del héroe arácnido con un traje profesional de nivel cinematográfico. Ideal para sesiones de fotos exclusivas y recuerdos inolvidables.</p>
+                            <div class="btn-container-dinamico">
+                                <a href="https://photos.app.goo.gl/jf98G6VHPv5PHg358" target="_blank" class="btn-link-externo">Anclado: 📷 Ver ejemplos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="retos" class="retos-section">
+        <div class="section-container">
+            <span class="badge-proximamente">PRÓXIMAMENTE</span>
+            <h2 class="section-title blanco">Retos por la Ciudad</h2>
+            <p class="section-subtitle gris">Muy pronto transformaremos las calles en un tablero interactivo.</p>
+        </div>
+    </section>
+
+    <footer id="contacto" class="sitio-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Ronmel Torres. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>web_ronmel</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
-</body>
->>>>>>> 1fc4a6a5a45a1b06507cc07cdafeae1f03fbdef1
 </html>
