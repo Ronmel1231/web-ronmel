@@ -8,110 +8,126 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@700;900&family=Segoe+UI:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#inicio" class="logo">Ronmel<span>Torres</span></a>
-            <nav class="nav-menu">
-                <a href="#inicio">Sobre mí</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#retos">Retos urbanos</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
+    <!-- MENÚ LATERAL IZQUIERDO -->
+    <nav class="sidebar-menu">
+        <div class="logo-area">
+            <h2>Web_Ronmel</h2>
         </div>
-    </header>
-
-    <a href="https://wa.me/593987828173?text=Hola,%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n." target="_blank" class="btn-whatsapp-flotante" aria-label="Contactar por WhatsApp">
-        <svg class="icon-whatsapp" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M12.004 2c-5.523 0-10 4.477-10 10a9.957 9.957 0 0 0 1.34 4.975L2 22l5.166-1.355A9.954 9.954 0 0 0 12.004 22c5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 1.5c4.694 0 8.5 3.806 8.5 8.5s-3.806 8.5-8.5 8.5c-1.616 0-3.123-.453-4.414-1.233l-.317-.192-3.076.807.821-3.003-.211-.336A8.455 8.455 0 0 1 3.504 12c0-4.694 3.806-8.5 8.5-8.5zm-3.642 4.496c-.16 0-.348.061-.51.229-.214.221-.767.749-.767 1.824 0 1.076.784 2.115.891 2.264.107.149 1.511 2.417 3.712 3.287.524.207.933.33z"/>
-        </svg>
-        <span class="texto-boton">Contáctame</span>
-    </a>
-
-    <section id="inicio" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="perfil-contenedor">
-                <img src="foto-Ronmel.jpeg" alt="Perfil" class="foto-principal" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80'">
+        <ul>
+            <li><a href="#inicio"><i class="fas fa-user"></i> Sobre mí</a></li>
+            <li><a href="#servicios"><i class="fas fa-briefcase"></i> Servicios</a></li>
+            <li><a href="#sugerencias"><i class="fas fa-lightbulb"></i> Sugerencias</a></li>
+            <li><a href="#retos"><i class="fas fa-lock"></i> Próximamente</a></li>
+            <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+        
+        <!-- Bloque de Redes Sociales -->
+        <div class="sidebar-socials">
+            <p>Sígueme en:</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/TU_USUARIO" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/TU_USUARIO" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@TU_USUARIO" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
-            
-            <h2 class="text-vibrante big-title">Experiencias Épicas</h2>
-            
-            <p class="lead big-text">
-                Soy un estudiante de Ingeniería Electromecánica y Energías Renovables en IKIAM que cree que la vida necesita un poco más de aventura. 
-                <br><br>
-                Mientras me preparo profesionalmente en el mundo de la ingeniería, también dedico parte de mi tiempo a crear experiencias que sorprendan a las personas. Desde entregas de regalos con "El Patrón" hasta sesiones fotográficas con Spider-Man, mi objetivo es convertir momentos comunes en recuerdos inolvidables.
-                <br><br>
-                <strong>Muy pronto llegarán nuevos retos y experiencias por toda la ciudad de Tena</strong>, donde la diversión, los premios y las sorpresas serán los protagonistas.
-            </p>
         </div>
-    </section>
+    </nav>
 
-    <section id="servicios" class="servicios-section">
-        <div class="section-container">
-            <h2 class="section-title">Mis Servicios Activos</h2>
-            <p class="section-subtitle">Toca la tarjeta en tu celular o pasa el cursor en PC para ver los detalles.</p>
-            
-            <div class="grid-servicios">
-                <div class="flip-card" onclick="this.classList.toggle('click')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('fotos-patron.png');">
-                            <div class="front-content">
-                                <img src="logo-patron.png" alt="Logo Patrón" class="logo-servicio-png logo-patron-card" onerror="this.style.display='none'">
-                                <h3 class="titulo-patron">Entregas del Patrón</h3>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3 class="titulo-patron">Entregas del Patrón</h3>
-                            <p>Sorpresas de alto impacto a domicilio llenas de ritmo, confeti y la máxima energía para el festejado.</p>
-                            <div class="opciones-tarjeta-container">
-                                <div class="btn-container-dinamico">
-                                    <a href="https://vt.tiktok.com/ZSxKq5Sn3/" target="_blank" class="btn-link-externo">🎬 Ver videos</a>
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="main-content">
+
+        <!-- HERO -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="perfil-contenedor">
+                    <img src="foto-Ronmel.jpeg" alt="Perfil" class="foto-principal" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80'">
+                </div>
+                <h2 class="text-vibrante big-title">Experiencias Épicas</h2>
+                <p class="lead big-text">
+                    Soy un estudiante de Ingeniería Electromecánica y Energías Renovables en IKIAM que cree que la vida necesita un poco más de aventura. 
+                    <br><br>
+                    Mientras me preparo profesionalmente en el mundo de la ingeniería, también dedico parte de mi tiempo a crear experiencias que sorprendan a las personas. Desde entregas de regalos con "El Patrón" hasta sesiones fotográficas con Spider-Man, mi objetivo es convertir momentos comunes en recuerdos inolvidables.
+                    <br><br>
+                    <strong>Muy pronto llegarán nuevos retos y experiencias por toda la ciudad de Tena</strong>, donde la diversión, los premios y las sorpresas serán los protagonistas.
+                </p>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios" class="servicios-section">
+            <div class="section-container">
+                <h2 class="section-title">Mis Servicios Activos</h2>
+                <p class="section-subtitle">Toca la tarjeta en tu celular o pasa el cursor en PC para ver los detalles.</p>
+                
+                <div class="grid-servicios">
+                    <!-- Tarjeta Patrón -->
+                    <div class="flip-card" onclick="this.classList.toggle('click')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('fotos-patron.png');">
+                                <div class="front-content">
+                                    <img src="logo-patron.png" alt="Logo Patrón" class="logo-servicio-png" onerror="this.style.display='none'">
+                                    <h3 class="titulo-patron">Entregas del Patrón</h3>
                                 </div>
-                                <div class="btn-container-dinamico">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="titulo-patron">Entregas del Patrón</h3>
+                                <p>Sorpresas de alto impacto a domicilio llenas de ritmo, confeti y la máxima energía para el festejado.</p>
+                                <div class="opciones-tarjeta-container">
+                                    <a href="https://vt.tiktok.com/ZSxKq5Sn3/" target="_blank" class="btn-link-externo">🎬 Ver videos</a>
                                     <a href="https://photos.app.goo.gl/ovxzSGqdCSez5H5J7" target="_blank" class="btn-link-externo">📷 Ver ejemplos</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="flip-card" onclick="this.classList.toggle('click')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('fotos-spiderman.png');">
-                            <div class="front-content">
-                                <img src="logo-spiderman.png" alt="Logo Spider-Man" class="logo-servicio-png logo-spiderman-card" onerror="this.style.display='none'">
-                                <h3 class="titulo-spiderman">Fotos con Spider-Man</h3>
+                    <!-- Tarjeta Spider-Man -->
+                    <div class="flip-card" onclick="this.classList.toggle('click')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('fotos-spiderman.png');">
+                                <div class="front-content">
+                                    <img src="logo-spiderman.png" alt="Logo Spider-Man" class="logo-servicio-png" onerror="this.style.display='none'">
+                                    <h3 class="titulo-spiderman">Fotos con Spider-Man</h3>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="titulo-spiderman">Sesiones Fotográficas</h3>
+                                <p>Presencia del héroe arácnido con un traje profesional de nivel cinematográfico. Ideal para sesiones de fotos exclusivas y recuerdos inolvidables.</p>
+                                <a href="https://photos.app.goo.gl/jf98G6VHPv5PHg358" target="_blank" class="btn-link-externo">📷 Ver ejemplos</a>
+                                <a href="https://vt.tiktok.com/TU_VIDEO" target="_blank" class="btn-link-externo">🎬 Ver videos</a>
                             </div>
                         </div>
-                        <div class="flip-card-back">
-                            <h3 class="titulo-spiderman">Sesiones Fotográficas</h3>
-                            <p>Presencia del héroe arácnido con un traje profesional de nivel cinematográfico. Ideal para sesiones de fotos exclusivas y recuerdos inolvidables.</p>
-                            <div class="btn-container-dinamico">
-                                <a href="https://photos.app.goo.gl/jf98G6VHPv5PHg358" target="_blank" class="btn-link-externo">📷 Ver ejemplos</a>
+                    </div>
+
+                    <!-- Nueva Tarjeta: Creación de Páginas Web -->
+                    <div class="flip-card" onclick="this.classList.toggle('click')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('fondo-web.png');">
+                                <div class="front-content">
+                                    <img src="logo-web.png" alt="Creación de páginas web en Napo, Ecuador" class="logo-servicio-png" onerror="this.style.display='none'">
+                                    <h3 class="titulo-web">Creación de Páginas Web</h3>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="titulo-web">Tu Negocio en el Mapa Digital</h3>
+                                <p>Diseño y desarrollo de sitios personalizados, rápidos y optimizados para móviles. Transformo tus ideas en una plataforma digital profesional.</p>
+                                <a href="https://wa.me/593987828173" target="_blank" class="btn-link-externo">💬 Cotizar por WhatsApp</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="retos" class="retos-section">
-        <div class="section-container">
-            <span class="badge-proximamente">PRÓXIMAMENTE</span>
-            <h2 class="section-title blanco">Retos por la Ciudad</h2>
-            <p class="section-subtitle gris">Muy pronto transformaremos las calles en un tablero interactivo.</p>
-        </div>
-    </section>
-
-    <footer id="contacto" class="sitio-footer">
-        <div class="footer-container">
-            <p>&copy; 2026 Ronmel Torres. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+        <!-- SUGERENCIAS -->
+        <section id="sugerencias" class="suggestions-section">
+            <h2>💡 ¿Qué te gustaría ver en mis redes o servicios?</h2>
+            <p>Tu opinión cuenta. Déjame tus sugerencias sobre nuevos retos urbanos, shows o ideas.</p>
+            <form action="https://formsubmit.co/TU_CORREO@email.com" method="POST" class="suggestion-form">
+                <input type="text" name="name" placeholder="Tu nombre (opcional)">
+                <select name="type">
+                    <option value="tiktok">Contenido para TikTok</option
