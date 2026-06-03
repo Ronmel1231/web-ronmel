@@ -3,17 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiencias Épicas | Sitio Oficial</title>
+    <title>Ronmel | Sitio Oficial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@700;900&family=Segoe+UI:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <h3>Menú</h3>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#sugerencias">Sugerencias</a>
+        <div class="sidebar-socials">
+            <a href="https://www.instagram.com/ronmeljtl/"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.tiktok.com/@ronmeltorres"><i class="fab fa-tiktok"></i> TikTok</a>
+            <a href="https://www.facebook.com/share/1E2pPwk57Y/"><i class="fab fa-facebook-f"></i> Facebook</a>
+        </div>
+    </div>
+
+    <button class="open-btn" onclick="toggleSidebar()">☰ Menú</button>
+
+    <div class="social-floats">
+        <a href="https://www.instagram.com/ronmeljtl/" class="float-btn insta"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1E2pPwk57Y/" class="float-btn face"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@ronmeltorres/" class="float-btn tik"><i class="fab fa-tiktok"></i></a>
+    </div>
+
     <header class="navbar">
         <div class="nav-container">
-            <a href="#inicio" class="logo">Ronmel<span>Torres</span></a>
+            <a href="#inicio" class="logo">
+    Ronmel <span>| Sitio Oficial</span>
+</a>
             <nav class="nav-menu">
                 <a href="#inicio">Sobre mí</a>
                 <a href="#servicios">Servicios</a>
@@ -23,12 +47,16 @@
         </div>
     </header>
 
-    <a href="https://wa.me/593987828173?text=Hola,%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n." target="_blank" class="btn-whatsapp-flotante" aria-label="Contactar por WhatsApp">
-        <svg class="icon-whatsapp" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M12.004 2c-5.523 0-10 4.477-10 10a9.957 9.957 0 0 0 1.34 4.975L2 22l5.166-1.355A9.954 9.954 0 0 0 12.004 22c5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 1.5c4.694 0 8.5 3.806 8.5 8.5s-3.806 8.5-8.5 8.5c-1.616 0-3.123-.453-4.414-1.233l-.317-.192-3.076.807.821-3.003-.211-.336A8.455 8.455 0 0 1 3.504 12c0-4.694 3.806-8.5 8.5-8.5zm-3.642 4.496c-.16 0-.348.061-.51.229-.214.221-.767.749-.767 1.824 0 1.076.784 2.115.891 2.264.107.149 1.511 2.417 3.712 3.287.524.207.933.33z"/>
-        </svg>
-        <span class="texto-boton">Contáctame</span>
-    </a>
+    <a href="https://wa.me/593987828173?text=Hola,%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n"
+   target="_blank"
+   class="btn-whatsapp-flotante">
+
+    <i class="fab fa-whatsapp"></i>
+
+    <span class="texto-boton">
+        Contáctame
+    </span>
+</a>
 
     <section id="inicio" class="hero-section">
         <div class="hero-overlay"></div>
@@ -36,82 +64,260 @@
             <div class="perfil-contenedor">
                 <img src="foto-Ronmel.jpeg" alt="Perfil" class="foto-principal" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80'">
             </div>
-            
-            <h2 class="text-vibrante big-title">Experiencias Épicas</h2>
-            
-            <p class="lead big-text">
-                Soy un estudiante de Ingeniería Electromecánica y Energías Renovables en IKIAM que cree que la vida necesita un poco más de aventura. 
-                <br><br>
-                Mientras me preparo profesionalmente en el mundo de la ingeniería, también dedico parte de mi tiempo a crear experiencias que sorprendan a las personas. Desde entregas de regalos con "El Patrón" hasta sesiones fotográficas con Spider-Man, mi objetivo es convertir momentos comunes en recuerdos inolvidables.
-                <br><br>
-                <strong>Muy pronto llegarán nuevos retos y experiencias por toda la ciudad de Tena</strong>, donde la diversión, los premios y las sorpresas serán los protagonistas.
-            </p>
+            <h2 class="text-vibrante big-title">Sobre mí</h2>
+<p class="lead big-text">
+    Soy estudiante de Ingeniería Electromecánica y Energías Renovables en la Universidad Regional Amazónica IKIAM.
+    Mientras me preparo profesionalmente en el mundo de la ingeniería, también dedico parte de mi tiempo a crear
+    experiencias que sorprendan y dejen recuerdos inolvidables.
+    <br><br>
+    A través de <strong>Entregas del Patrón</strong>, llevo sorpresas especiales con responsabilidad,
+    puntualidad y seguridad. Además, ofrezco el servicio de <strong>Spider-Man para fotografías,
+    cumpleaños y eventos</strong>, creando momentos llenos de emoción, diversión y alegría para niños y adultos.
+    <br><br>
+    Me gusta combinar la dedicación, la creatividad y el compromiso en cada proyecto que realizo,
+    siempre buscando brindar una experiencia única a cada persona.
+</p>
         </div>
     </section>
 
-    <section id="servicios" class="servicios-section">
-        <div class="section-container">
-            <h2 class="section-title">Mis Servicios Activos</h2>
-            <p class="section-subtitle">Toca la tarjeta en tu celular o pasa el cursor en PC para ver los detalles.</p>
-            
-            <div class="grid-servicios">
-                <div class="flip-card" onclick="this.classList.toggle('click')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('fotos-patron.png');">
-                            <div class="front-content">
-                                <img src="logo-patron.png" alt="Logo Patrón" class="logo-servicio-png logo-patron-card" onerror="this.style.display='none'">
-                                <h3 class="titulo-patron">Entregas del Patrón</h3>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3 class="titulo-patron">Entregas del Patrón</h3>
-                            <p>Sorpresas de alto impacto a domicilio llenas de ritmo, confeti y la máxima energía para el festejado.</p>
-                            <div class="opciones-tarjeta-container">
-                                <div class="btn-container-dinamico">
-                                    <a href="https://vt.tiktok.com/ZSxKq5Sn3/" target="_blank" class="btn-link-externo">🎬 Ver videos</a>
-                                </div>
-                                <div class="btn-container-dinamico">
-                                    <a href="https://photos.app.goo.gl/ovxzSGqdCSez5H5J7" target="_blank" class="btn-link-externo">📷 Ver ejemplos</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<section id="servicios" class="servicios-section">
+    <div class="section-container">
+        <h2 class="section-title">Mis Servicios Activos</h2>
 
-                <div class="flip-card" onclick="this.classList.toggle('click')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('fotos-spiderman.png');">
-                            <div class="front-content">
-                                <img src="logo-spiderman.png" alt="Logo Spider-Man" class="logo-servicio-png logo-spiderman-card" onerror="this.style.display='none'">
-                                <h3 class="titulo-spiderman">Fotos con Spider-Man</h3>
-                            </div>
+        <div class="grid-servicios">
+
+            <!-- ENTREGAS DEL PATRÓN -->
+            <div class="flip-card" onclick="this.classList.toggle('click')">
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('fotos-patron.png');">
+                        <div class="front-content">
+                            <img src="logo-patron.png"
+                                 class="logo-servicio-png logo-patron-card"
+                                 alt="Logo Patrón">
+
+                            <h3 class="titulo-patron">
+                                Entregas del Patrón
+                            </h3>
                         </div>
-                        <div class="flip-card-back">
-                            <h3 class="titulo-spiderman">Sesiones Fotográficas</h3>
-                            <p>Presencia del héroe arácnido con un traje profesional de nivel cinematográfico. Ideal para sesiones de fotos exclusivas y recuerdos inolvidables.</p>
+                    </div>
+
+                    <div class="flip-card-back">
+                        <h3 class="titulo-patron">Entregas del Patrón</h3>
+
+                        <p>
+                            Sorpresas de alto impacto a domicilio llenas de ritmo,
+                            confeti y la máxima energía para el festejado.
+                        </p>
+
+                        <div class="opciones-tarjeta-container">
                             <div class="btn-container-dinamico">
-                                <a href="https://photos.app.goo.gl/jf98G6VHPv5PHg358" target="_blank" class="btn-link-externo">📷 Ver ejemplos</a>
+                                <a href="https://vt.tiktok.com/ZSxKq5Sn3/"
+                                   target="_blank"
+                                   class="btn-link-externo">
+                                    🎬 Ver videos
+                                </a>
+                            </div>
+
+                            <div class="btn-container-dinamico">
+                                <a href="https://photos.app.goo.gl/jf98G6VHPv5PHg358"
+                                   target="_blank"
+                                   class="btn-link-externo">
+                                    📷 Ver ejemplos
+                                </a>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="retos" class="retos-section">
-        <div class="section-container">
-            <span class="badge-proximamente">PRÓXIMAMENTE</span>
-            <h2 class="section-title blanco">Retos por la Ciudad</h2>
-            <p class="section-subtitle gris">Muy pronto transformaremos las calles en un tablero interactivo.</p>
+            <!-- SPIDER-MAN -->
+            <div class="flip-card" onclick="this.classList.toggle('click')">
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('fotos-spiderman.png');">
+                        <div class="front-content">
+                            <img src="logo-spiderman.png"
+                                 class="logo-servicio-png logo-spiderman-card"
+                                 alt="Logo Spider-Man">
+
+                            <h3 class="titulo-spiderman">
+                                Fotos con Spider-Man
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-back">
+
+                        <h3 class="titulo-spiderman">
+                            Fotos con Spider-Man
+                        </h3>
+
+                        <p>
+                            Vive una experiencia inolvidable junto al héroe favorito
+                            de todos. Ideal para cumpleaños, eventos infantiles,
+                            sesiones fotográficas y actividades especiales.
+                        </p>
+
+                        <div class="opciones-tarjeta-container">
+
+                            <div class="btn-container-dinamico">
+                                <a href="https://photos.app.goo.gl/jf98G6VHPv5PHg358"
+                                   target="_blank"
+                                   class="btn-link-externo">
+                                    📷 Ver ejemplos
+                                </a>
+                            </div>
+
+                            <div class="btn-container-dinamico">
+                                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20Fotos%20con%20Spider-Man"
+                                   target="_blank"
+                                   class="btn-link-externo">
+                                    🕷️ Solicitar información
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DESARROLLO WEB -->
+            <div class="flip-card" onclick="this.classList.toggle('click')">
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front" style="background-color: #1e3a8a;">
+                        <div class="front-content">
+                            <img src="logo-sitios-web.png"
+                                 class="logo-servicio-png logo-web-card"
+                                 alt="Logo sitios web">
+
+                            <h3 class="titulo-web">
+                                Desarrollo Web
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-back">
+
+                        <h3 class="titulo-web">
+                            Desarrollo Web
+                        </h3>
+
+                        <p>
+                            Diseño y desarrollo de páginas web modernas,
+                            rápidas y adaptadas para emprendimientos,
+                            negocios y proyectos personales.
+                        </p>
+
+                        <div class="opciones-tarjeta-container">
+                            <div class="btn-container-dinamico">
+                                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20desarrollo%20web"
+                                target="_blank"
+                                class="btn-servicio">
+                                Solicitar información
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TUTORÍAS -->
+            <div class="flip-card" onclick="this.classList.toggle('click')">
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front" style="background-color: #d97706;">
+                        <div class="front-content">
+                            <img src="logo-tutorias.png"
+                                 class="logo-servicio-png logo-tutorias-card"
+                                 alt="Logo tutorías">
+
+                            <h3 class="titulo-tutorias">
+                                Tutorías Académicas
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-back">
+
+                        <h3 class="titulo-tutorias">
+                            Tutorías Académicas
+                        </h3>
+
+                        <p>
+                            Apoyo académico personalizado, resolución de
+                            ejercicios y acompañamiento en materias técnicas
+                            y universitarias.
+                        </p>
+
+                        <div class="opciones-tarjeta-container">
+                            <div class="btn-container-dinamico">
+                                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20tutorías%20académicas"
+                                target="_blank"
+                                class="btn-servicio">
+                                Solicitar información
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
+<section id="sugerencias" class="sugerencias-section">
+    <div class="sugerencias-card">
+        <h2>💡 ¿Tienes una idea épica?</h2>
+
+        <p>
+            Tus ideas pueden convertirse en el próximo proyecto, reto o experiencia.
+            Me encantaría conocer tus sugerencias.
+        </p>
+
+        <a href="https://forms.gle/doDyZkKX7ipXVnJm6"
+           target="_blank"
+           class="btn-sugerencias">
+            Envíame tus sugerencias
+        </a>
+    </div>
+</section>
+
+<section id="retos" class="retos-section">
+    <div class="section-container">
+
+        <div class="misterio-icono">
+            <div class="misterio-icono">
+             <i class="fas fa-user-secret"></i>
+            </div>
+        </div>
+
+        <h2 class="section-title blanco">
+            Retos por la Ciudad
+        </h2>
+
+        <p class="section-subtitle gris">
+            Muy pronto transformaremos las calles.
+        </p>
+
+    </div>
+</section>
 
     <footer id="contacto" class="sitio-footer">
-        <div class="footer-container">
-            <p>&copy; 2026 Ronmel Torres. Todos los derechos reservados.</p>
-        </div>
+        <p>&copy; 2026 Ronmel Torres.</p>
     </footer>
 
+    <script>
+        function toggleSidebar() { document.getElementById("sidebar").classList.toggle("active"); }
+    </script>
 </body>
 </html>

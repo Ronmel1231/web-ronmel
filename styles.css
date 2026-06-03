@@ -61,7 +61,67 @@ body {
     font-weight: 600; 
     margin-left: 20px; 
 }
+/* SIDEBAR Y MENÚ */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-dark);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 80px;
+    border-right: 2px solid var(--primary-red);
+}
 
+.sidebar.active {
+    width: 250px;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: var(--primary-red);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.open-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2500;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar-socials {
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+    margin-top: 20px;
+}
 /* BOTÓN FLOTANTE DE WHATSAPP */
 .btn-whatsapp-flotante {
     position: fixed; 
@@ -126,14 +186,15 @@ body {
 }
 
 .perfil-contenedor {
-    width: 140px; 
-    height: 140px; 
-    margin: 0 auto 25px auto;
-    border-radius: 50%; 
-    padding: 4px;
+    width: 260px;
+    height: 260px;
+    margin: 0 auto 35px auto;
+    border-radius: 50%;
+    padding: 6px;
     background: linear-gradient(135deg, var(--primary-red), var(--gold));
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
+
 .foto-principal { 
     width: 100%; 
     height: 100%; 
@@ -144,8 +205,8 @@ body {
 
 /* Clases de ajuste solicitadas */
 .big-title {
-    font-size: 3.5rem !important;
-    margin-bottom: 25px;
+    font-size: 3.5rem;
+    margin-bottom: 35px;
 }
 
 .big-text {
@@ -210,6 +271,62 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     border-radius: 20px;
 }
+.sugerencias-section {
+    padding: 80px 20px;
+    background: linear-gradient(
+        135deg,
+        #0f172a 0%,
+        #1e1b4b 100%
+    );
+    display: flex;
+    justify-content: center;
+}
+
+.sugerencias-card {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 25px;
+    padding: 50px 35px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.sugerencias-card h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sugerencias-card p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn-sugerencias {
+    display: inline-block;
+    padding: 16px 38px;
+    background: linear-gradient(
+        135deg,
+        #e11d48,
+        #fb7185
+    );
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(225,29,72,0.4);
+}
+
+.btn-sugerencias:hover {
+    transform: translateY(-3px);
+}
 
 @media (hover: hover) {
     .flip-card:hover .flip-card-inner {
@@ -264,6 +381,8 @@ body {
 
 .logo-patron-card { height: 115px; }
 .logo-spiderman-card { height: 100px; }
+.logo-web-card {height: 100px; }
+.logo-tutorias-card {height: 105px; }
 
 .flip-card-back {
     background-color: #ffffff;
@@ -309,6 +428,27 @@ body {
     color: #1e3a8a; 
     margin-bottom: 15px;
 }
+.titulo-web {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.3),
+        0 0 15px rgba(255,255,255,0.2);
+}
+
+.titulo-tutorias {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #1c82d6;
+    text-shadow: none;
+    margin-bottom: 15px;
+}
 
 .btn-container-dinamico {
     display: inline-block;
@@ -323,17 +463,40 @@ body {
     background-color: #2b2b2b;
     transform: scale(1.03);
 }
-.btn-link-externo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: #ffffff;
+.btn-sugerencias {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #e11d48;
+    color: white;
     text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+.btn-sugerencias:hover {
+    transform: translateY(-2px);
+    background: #be123c;
+}
+.btn-servicio {
+    display: inline-block;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 50px;
     font-weight: 700;
     font-size: 0.95rem;
-    padding: 14px 28px;
-    width: 100%;
+    transition: all 0.3s ease;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.btn-servicio:hover {
+    background: #1f2937;
+    transform: translateY(-2px);
 }
 
 .opciones-tarjeta-container {
@@ -344,9 +507,31 @@ body {
     align-items: center;
 }
 
-.retos-section { 
-    background-color: var(--bg-dark); 
-    text-align: center; 
+.retos-section {
+    background-color: var(--bg-dark);
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.misterio-icono {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    font-size: 220px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.05);
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+}
+
+.retos-section .section-container {
+    position: relative;
+    z-index: 2;
 }
 .badge-proximamente { 
     display: inline-block; 
@@ -362,6 +547,46 @@ body {
     color: white; 
     text-align: center; 
     padding: 40px 20px; 
+}
+
+.social-floats {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1500;
+}
+
+.float-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.float-btn:hover {
+    transform: scale(1.1);
+}
+
+.insta {
+    background: #e1306c;
+}
+
+.face {
+    background: #4267B2;
+}
+
+.tik {
+    background: #000;
 }
 
 /* MEDIA QUERIES (RESPONSIVE) */
