@@ -1097,3 +1097,184 @@ body {
         font-size: 0.9rem;
     }
 }
+/* AJUSTES PARA MÓVIL */
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        height: 58px;
+        padding: 0 10px;
+    }
+
+    .nav-container {
+        height: 58px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1rem;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .open-btn {
+        top: 13px;
+        left: 10px;
+        padding: 7px 10px;
+        font-size: 0.8rem;
+        z-index: 4000;
+    }
+
+    .sidebar.active {
+        width: 230px;
+    }
+
+    .hero-section {
+        padding: 95px 18px 55px;
+        min-height: auto;
+    }
+
+    .perfil-contenedor {
+        width: 145px;
+        height: 145px;
+    }
+
+    .big-title {
+        font-size: 2.2rem !important;
+    }
+
+    .big-text {
+        font-size: 0.95rem !important;
+        line-height: 1.65 !important;
+    }
+
+    .section-container {
+        padding: 50px 15px;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .grid-servicios,
+    .materias-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+    }
+
+    .flip-card {
+        height: 330px;
+    }
+
+    .front-content {
+        width: 88%;
+        padding: 22px 16px;
+    }
+
+    .titulo-patron {
+        font-size: 1.6rem;
+    }
+
+    .titulo-spiderman {
+        font-size: 1.1rem;
+    }
+
+    .titulo-web {
+        font-size: 1.45rem;
+    }
+
+    .titulo-tutorias {
+        font-size: 1.65rem;
+    }
+
+    .logo-patron-card {
+        height: 80px;
+    }
+
+    .logo-spiderman-card,
+    .logo-web-card,
+    .logo-tutorias-card {
+        height: 75px;
+    }
+
+    .flip-card-back {
+        padding: 24px 18px;
+    }
+
+    .flip-card-back p {
+        font-size: 0.9rem;
+        line-height: 1.45;
+    }
+
+    .btn-link-externo,
+    .btn-servicio,
+    .btn-materia {
+        font-size: 0.85rem;
+        padding: 11px 20px;
+        min-width: 180px;
+    }
+
+    .materia-card {
+        min-height: 210px;
+        padding: 24px 18px;
+        border-radius: 18px;
+    }
+
+    .materia-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .sugerencias-card {
+        padding: 35px 22px;
+    }
+
+    .sugerencias-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .retos-section {
+        padding: 70px 18px;
+    }
+
+    .misterio-icono {
+        font-size: 150px;
+    }
+
+    .proximamente-badge {
+        font-size: 0.7rem;
+        padding: 7px 14px;
+    }
+
+    .frase-misterio {
+        font-size: 0.9rem;
+    }
+
+    .social-floats {
+        right: 12px;
+        bottom: 88px;
+    }
+
+    .float-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .btn-whatsapp-flotante {
+        right: 12px;
+        bottom: 20px;
+        width: 52px;
+        height: 52px;
+        padding: 0;
+        border-radius: 50%;
+    }
+
+    .btn-whatsapp-flotante .texto-boton {
+        display: none;
+    }
+}
