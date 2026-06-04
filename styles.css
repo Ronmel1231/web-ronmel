@@ -1363,6 +1363,23 @@ body {
     .reto-descripcion {
         font-size: 1rem;
     }
+    .section-title.blanco {
+    font-size: 2rem;
+}
+
+.proximamente-badge {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.misterio-icono {
+    font-size: 140px;
+    opacity: 0.06;
+}
+
+.reto-mini-info {
+    gap: 10px;
+}
 
     .reto-mini-info span {
         font-size: 0.85rem;
