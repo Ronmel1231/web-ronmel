@@ -327,6 +327,206 @@ body {
 .btn-sugerencias:hover {
     transform: translateY(-3px);
 }
+.materias-section {
+    background: #f8fafc;
+    padding: 80px 20px;
+}
+
+.materias-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 40px;
+}
+.materia-card {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+    padding: 35px 25px;
+
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.materia-diseno {
+    background-position: center center;
+}
+
+.materia-materiales {
+    background-position: center 35%;
+}
+
+.materia-termodinamica {
+    background-position: center 45%;
+}
+
+.materia-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+    transition: 0.3s ease;
+}
+
+.materia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.15);
+}
+
+.materia-card h3 {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 800;
+
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+
+    padding: 10px 18px;
+    border-radius: 12px;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,0.8);
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+.materias-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.materia-card {
+    position: relative;
+    min-height: 230px;
+    border-radius: 24px;
+    padding: 28px;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.22);
+    transition: 0.35s ease;
+}
+
+.materia-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(15, 23, 42, 0.92),
+        rgba(15, 23, 42, 0.55),
+        rgba(15, 23, 42, 0.15)
+    );
+    z-index: 1;
+}
+
+.materia-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
+}
+
+.materia-card h3,
+.materia-card .btn-materia {
+    position: relative;
+    z-index: 2;
+}
+
+.materia-card h3 {
+    color: white;
+    font-size: 1.45rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 18px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.9);
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.btn-materia {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    background: linear-gradient(135deg, #e11d48, #f97316);
+    color: white !important;
+    text-decoration: none !important;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 800;
+    box-shadow: 0 8px 22px rgba(225, 29, 72, 0.35);
+    transition: 0.3s ease;
+}
+
+.btn-materia:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(225, 29, 72, 0.5);
+}
+
+@media (min-width: 768px) {
+    .materias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.btn-materia {
+    display: inline-block;
+    background: #111827;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+.oculto {
+    display: none;
+}
+
+.materias-section {
+    animation: aparecer 0.4s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.btn-materia:hover {
+    background: #1e3a8a;
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .materias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (hover: hover) {
     .flip-card:hover .flip-card-inner {
@@ -357,17 +557,68 @@ body {
 
 .front-content {
     z-index: 3;
-    background: rgba(15, 23, 42, 0.6);
-    padding: 25px 20px;
-    border-radius: 15px;
-    backdrop-filter: blur(4px);
+    background: rgba(15, 23, 42, 0.82);
+    padding: 30px 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
     width: 88%;
-    height: auto;
+    border: 1px solid rgba(255,255,255,0.08);
+
     display: flex;
     flex-direction: column;
-    align-items: center;       
-    justify-content: center;   
-    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.logo-web-card,
+.logo-tutorias-card {
+    height: 105px;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255,255,255,0.15))
+        drop-shadow(0 5px 12px rgba(0,0,0,0.45));
+
+    transition: transform 0.3s ease;
+}
+
+.flip-card:hover .logo-web-card,
+.flip-card:hover .logo-tutorias-card {
+    transform: scale(1.08);
+}
+.titulo-web {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    text-shadow:
+        0 0 6px rgba(255,255,255,0.9),
+        0 0 14px rgba(59,130,246,0.8),
+        0 3px 8px rgba(0,0,0,0.8);
+}
+.flip-card-back .titulo-web,
+.titulo-web-back {
+    color: #1e3a8a;
+    text-shadow: none;
+    margin-bottom: 15px;
+}
+.titulo-tutorias {
+    font-family: 'Bangers', cursive;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+.flip-card-front .titulo-tutorias {
+    color: #60a5fa;
+    text-shadow:
+        0 0 8px rgba(96,165,250,0.4),
+        2px 2px 3px rgba(0,0,0,0.5);
 }
 
 .logo-servicio-png {

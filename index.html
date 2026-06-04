@@ -189,14 +189,17 @@
             <div class="flip-card" onclick="this.classList.toggle('click')">
                 <div class="flip-card-inner">
 
-                    <div class="flip-card-front" style="background-color: #1e3a8a;">
+                    <div class="flip-card-front"
+                         style="background-image:
+                         linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                         url('web.jpg');">
                         <div class="front-content">
                             <img src="logo-sitios-web.png"
                                  class="logo-servicio-png logo-web-card"
                                  alt="Logo sitios web">
 
-                            <h3 class="titulo-web">
-                                Desarrollo Web
+                            <h3 class="titulo-web titulo-web-back">
+                            Desarrollo Web
                             </h3>
                         </div>
                     </div>
@@ -232,7 +235,10 @@
             <div class="flip-card" onclick="this.classList.toggle('click')">
                 <div class="flip-card-inner">
 
-                    <div class="flip-card-front" style="background-color: #d97706;">
+                    <div class="flip-card-front"
+                         style="background-image:
+                         linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                         url('tutorias.jpg');">
                         <div class="front-content">
                             <img src="logo-tutorias.png"
                                  class="logo-servicio-png logo-tutorias-card"
@@ -258,17 +264,98 @@
 
                         <div class="opciones-tarjeta-container">
                             <div class="btn-container-dinamico">
-                                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20tutorías%20académicas"
-                                target="_blank"
-                                class="btn-servicio">
-                                Solicitar información
-                                </a>
+                                <button type="button" class="btn-servicio" onclick="event.stopPropagation(); toggleMaterias();">
+                                Ver materias disponibles
+                                </button>
                             </div>
                         </div>
 
                     </div>
 
                 </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="materias-tutorias" class="materias-section oculto">
+    <div class="section-container">
+        <h2 class="section-title">Materias que puedo cubrir</h2>
+        <p class="section-subtitle">Selecciona una materia y contáctame directamente.</p>
+
+        <div class="materias-grid">
+
+            <div class="materia-card"
+                 style="background-image:
+                 linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                 url('mate.png');">
+                <h3>Matemáticas I, II, III</h3>
+                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20tutorías%20de%20Matemáticas%20I,%20II%20y%20III"
+                   target="_blank" class="btn-materia">Contactar</a>
+            </div>
+
+            <div class="materia-card"
+                 style="background-image:
+                 linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                 url('fisica.jpg');">
+                <h3>Física I, II</h3>
+                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20tutorías%20de%20Física%20I%20y%20II"
+                   target="_blank" class="btn-materia">Contactar</a>
+            </div>
+
+            <div class="materia-card"
+                 style="background-image:
+                 linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                 url('diseño-computadora.jpg');">
+                <h3>Diseño asistido por computadora</h3>
+                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20tutorías%20de%20Diseño%20asistido%20por%20computadora"
+                   target="_blank" class="btn-materia">Contactar</a>
+            </div>
+
+            <div class="materia-card"
+                 style="background-image:
+                 linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                 url('teoria-maquinas.jpg');">
+                <h3>Teoría de máquinas</h3>
+                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20tutorías%20de%20Teoría%20de%20máquinas"
+                   target="_blank" class="btn-materia">Contactar</a>
+            </div>
+
+            <div class="materia-card"
+                 style="background-image:
+                 linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                 url('tecnologia-materiales.jpg');">
+                <h3>Tecnología de materiales</h3>
+                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20tutorías%20de%20Tecnología%20de%20materiales"
+                   target="_blank" class="btn-materia">Contactar</a>
+            </div>
+
+            <div class="materia-card"
+                 style="background-image:
+                 linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                 url('autocad.jpg');">
+                <h3>AutoCAD</h3>
+                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20tutorías%20de%20AutoCAD"
+                   target="_blank" class="btn-materia">Contactar</a>
+            </div>
+
+            <div class="materia-card"
+                 style="background-image:
+                 linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                 url('termodinamica.jpg');">
+                <h3>Termodinámica</h3>
+                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20tutorías%20de%20Termodinámica"
+                   target="_blank" class="btn-materia">Contactar</a>
+            </div>
+
+            <div class="materia-card"
+                 style="background-image:
+                 linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                 url('electrotecnia.jpg');">
+                <h3>Electrotecnia y electrónica</h3>
+                <a href="https://wa.me/593987828173?text=Hola,%20quiero%20información%20sobre%20tutorías%20de%20Electrotecnia%20y%20electrónica"
+                   target="_blank" class="btn-materia">Contactar</a>
             </div>
 
         </div>
@@ -317,7 +404,29 @@
     </footer>
 
     <script>
-        function toggleSidebar() { document.getElementById("sidebar").classList.toggle("active"); }
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+    }
+
+    function toggleMaterias() {
+        const seccion = document.getElementById("materias-tutorias");
+
+        if (!seccion) {
+            console.log("No existe la sección materias-tutorias");
+            return;
+        }
+
+        seccion.classList.toggle("oculto");
+
+        if (!seccion.classList.contains("oculto")) {
+            setTimeout(() => {
+                seccion.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 100);
+        }
+    }
     </script>
 </body>
 </html>
