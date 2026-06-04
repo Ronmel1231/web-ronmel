@@ -44,13 +44,20 @@ body {
     display: flex; 
     justify-content: space-between; 
     align-items: center;
+    
+    position: relative;
+    height: 70px;
 }
-.logo { 
-    color: white; 
-    font-size: 1.5rem; 
-    font-weight: 800; 
-    text-decoration: none; 
-    text-transform: uppercase; 
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .logo span { 
     color: var(--primary-red); 
@@ -799,12 +806,41 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -55%);
-    font-size: 220px;
-    font-weight: 900;
-    color: rgba(255,255,255,0.05);
+    font-size: 260px;
+    color: rgba(255,255,255,0.06);
     z-index: 1;
-    user-select: none;
-    pointer-events: none;
+    animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translate(-50%, -55%);
+    }
+    50% {
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        transform: translate(-50%, -55%);
+    }
+}
+.proximamente-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ef4444, #f97316);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(239,68,68,0.35);
+}
+
+.frase-misterio {
+    color: #94a3b8;
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 1rem;
 }
 
 .retos-section .section-container {
