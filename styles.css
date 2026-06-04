@@ -463,6 +463,33 @@ body {
     background-color: #2b2b2b;
     transform: scale(1.03);
 }
+.btn-link-externo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: #111827;
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    padding: 14px 28px;
+    border-radius: 50px;
+
+    font-weight: 700;
+    font-size: 0.95rem;
+
+    min-width: 200px;
+
+    transition: all 0.3s ease;
+}
+
+.btn-link-externo:hover {
+    background: #1f2937;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
 .btn-sugerencias {
     display: inline-block;
     padding: 15px 35px;
@@ -619,5 +646,167 @@ body {
     }
     .flip-card.click .flip-card-inner {
         transform: rotateY(180deg);
+    }
+}
+/* AJUSTES PARA TELÉFONO */
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 1rem;
+        margin-left: 85px;
+    }
+
+    .open-btn {
+        top: 12px;
+        left: 12px;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .hero-section {
+        padding: 110px 18px 70px 18px;
+        min-height: auto;
+    }
+
+    .perfil-contenedor {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 25px;
+    }
+
+    .big-title {
+        font-size: 2.4rem !important;
+        margin-bottom: 20px;
+    }
+
+    .big-text {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+        text-align: center;
+    }
+
+    .section-container {
+        padding: 55px 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .grid-servicios {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .flip-card {
+        height: 330px;
+    }
+
+    .front-content {
+        width: 86%;
+        padding: 22px 15px;
+    }
+
+    .titulo-patron {
+        font-size: 1.7rem;
+    }
+
+    .titulo-spiderman {
+        font-size: 1.15rem;
+    }
+
+    .titulo-web {
+        font-size: 1.25rem;
+    }
+
+    .titulo-tutorias {
+        font-size: 1.65rem;
+    }
+
+    .logo-patron-card {
+        height: 85px;
+    }
+
+    .logo-spiderman-card,
+    .logo-web-card,
+    .logo-tutorias-card {
+        height: 78px;
+    }
+
+    .flip-card-back {
+        padding: 25px 18px;
+    }
+
+    .flip-card-back p {
+        font-size: 0.92rem;
+        line-height: 1.45;
+        margin-bottom: 18px;
+    }
+
+    .btn-link-externo,
+    .btn-servicio {
+        font-size: 0.85rem;
+        padding: 12px 20px;
+        min-width: 190px;
+    }
+
+    .sugerencias-section {
+        padding: 60px 18px;
+    }
+
+    .sugerencias-card {
+        padding: 35px 22px;
+        border-radius: 20px;
+    }
+
+    .sugerencias-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .sugerencias-card p {
+        font-size: 1rem;
+    }
+
+    .retos-section {
+        padding: 70px 18px;
+    }
+
+    .misterio-icono {
+        font-size: 150px;
+    }
+
+    .social-floats {
+        right: 14px;
+        bottom: 90px;
+    }
+
+    .float-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .btn-whatsapp-flotante {
+        width: 52px;
+        height: 52px;
+        right: 14px;
+        bottom: 20px;
+    }
+
+    .btn-whatsapp-flotante .texto-boton {
+        display: none;
+    }
+
+    .sitio-footer {
+        padding: 30px 15px;
+        font-size: 0.9rem;
     }
 }
