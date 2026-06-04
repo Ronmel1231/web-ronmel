@@ -401,26 +401,99 @@
         </div>
 
         <div class="reto-panel">
-            <div class="proximamente-badge">PRÓXIMAMENTE</div>
 
-            <h2 class="section-title blanco">Retos Urbanos</h2>
+    <div class="proximamente-badge">
+        PRÓXIMAMENTE
+    </div>
 
-            <p class="reto-fecha">
-                El primer Reto Urbano iniciará el <strong>06/06/2026</strong>
-            </p>
+    <h2 class="section-title blanco">
+        Retos Urbanos
+    </h2>
 
-            <div class="reto-linea"></div>
+    <p class="reto-fecha">
+        El primer Reto Urbano iniciará el <strong>06/06/2026</strong>
+    </p>
 
-            <p class="reto-descripcion">
-                🏆 Resuelve pistas, encuentra códigos ocultos y sé el primero en llegar al tesoro.
-            </p>
+    <div class="reto-linea"></div>
 
-            <div class="reto-mini-info">
-                <span>🕵️ Búsqueda real</span>
-                <span>🔐 Códigos secretos</span>
-                <span>🎁 Premios</span>
-            </div>
+    <p class="reto-descripcion">
+        🏆 Resuelve pistas, encuentra códigos ocultos y sé el primero en llegar al tesoro.
+    </p>
+
+    <div class="reto-mini-info">
+        <span>🕵️ Búsqueda real</span>
+        <span>🔐 Códigos secretos</span>
+        <span>🎁 Premios</span>
+    </div>
+
+    <div class="premios-panel">
+
+        <h3>🎯 Premio actual</h3>
+
+        <div class="premio-actual-reto">
+            💵 $5 en efectivo o transferencia
         </div>
+
+        <h4>Próximos premios</h4>
+
+        <div class="lista-premios">
+
+            <div class="premio-bloqueado">
+                🔒 Entrega del Patrón
+            </div>
+
+            <div class="premio-bloqueado">
+                🔒 Volquetero ($6)
+            </div>
+
+            <div class="premio-bloqueado">
+                🔒 Fotos con Spider-Man
+            </div>
+
+            <div class="premio-bloqueado">
+                🔒 $10 en efectivo o transferencia
+            </div>
+
+        </div>
+
+    </div>
+
+       <button class="btn-reto" onclick="toggleGanadores()">
+       🏆 Salón de Ganadores
+       </button>
+
+    <div id="ganadores-anteriores" class="ganadores-panel oculto">
+
+        <h3>Salón de Ganadores</h3>
+
+        <div class="ganador-item">
+            <span>Reto #1</span>
+            <strong>Pendiente</strong>
+        </div>
+
+        <div class="ganador-item">
+            <span>Reto #2</span>
+            <strong>Pendiente</strong>
+        </div>
+
+        <div class="ganador-item">
+            <span>Reto #3</span>
+            <strong>Pendiente</strong>
+        </div>
+
+        <div class="ganador-item">
+            <span>Reto #4</span>
+            <strong>Pendiente</strong>
+        </div>
+
+        <div class="ganador-item">
+            <span>Reto #5</span>
+            <strong>Pendiente</strong>
+        </div>
+
+    </div>
+
+</div>
 
     </div>
 </section>
@@ -453,6 +526,17 @@
             }, 100);
         }
     }
-    </script>
+
+    function toggleGanadores() {
+        const panel = document.getElementById("ganadores-anteriores");
+
+        if (!panel) {
+            console.log("No existe el panel de ganadores");
+            return;
+        }
+
+        panel.classList.toggle("oculto");
+    }
+</script>
 </body>
 </html>

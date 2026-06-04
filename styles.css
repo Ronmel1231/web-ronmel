@@ -507,7 +507,7 @@ body {
     transition: 0.3s ease;
 }
 .oculto {
-    display: none;
+    display: none !important;
 }
 
 .materias-section {
@@ -1385,4 +1385,103 @@ body {
         font-size: 0.85rem;
         padding: 9px 13px;
     }
+}
+.premios-panel {
+    margin-top: 30px;
+}
+
+.premios-panel h3,
+.premios-panel h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.premio-actual-reto {
+    background: linear-gradient(135deg,#22c55e,#16a34a);
+    color: white;
+    font-weight: 800;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.lista-premios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.premio-bloqueado {
+    background: rgba(255,255,255,0.08);
+    color: #cbd5e1;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.ganadores-panel {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.ganador-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    color: #e2e8f0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.ganador-item:last-child {
+    border-bottom: none;
+}
+
+.ganador-item strong {
+    color: #facc15;
+}
+.btn-reto {
+    margin-top: 25px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 30px;
+
+    background: linear-gradient(
+        135deg,
+        #e11d48,
+        #f97316
+    );
+
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(225,29,72,0.35),
+        0 0 20px rgba(249,115,22,0.25);
+
+    transition: all 0.3s ease;
+}
+
+.btn-reto:hover {
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 16px 35px rgba(225,29,72,0.45),
+        0 0 25px rgba(249,115,22,0.45);
+}
+
+.btn-reto:active {
+    transform: translateY(-1px);
 }
