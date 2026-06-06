@@ -1485,3 +1485,13 @@ body {
 .btn-reto:active {
     transform: translateY(-1px);
 }
+.contador-jugadores {
+    margin: 18px auto;
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.08);
+    color: #f8fafc;
+    font-weight: 700;
+    border: 1px solid rgba(255,255,255,0.12);
+}
