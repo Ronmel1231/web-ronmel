@@ -413,87 +413,100 @@
             <i class="fas fa-user-secret"></i>
         </div>
 
-        <div id="pantalla-reglas" class="reto-card">
-            <div class="proximamente-badge">RETO ACTIVO</div>
+        <div class="reto-panel">
 
-            <h2 class="section-title blanco">Retos Urbanos</h2>
+    <div class="proximamente-badge">
+        PRÓXIMAMENTE
+    </div>
 
-            <p class="section-subtitle gris">
-                El tesoro aún no ha sido encontrado. Ve a buscarlo y llévate el premio.
-            </p>
+    <h2 class="section-title blanco">
+        Retos Urbanos
+    </h2>
 
-            <div class="premio-actual">
-            💵 Premio actual: <strong>$5 en efectivo o transferencia</strong>
+    <p class="reto-fecha">
+        El primer Reto Urbano iniciará el <strong>07/06/2026</strong>
+    </p>
+
+    <div class="reto-linea"></div>
+
+    <p class="reto-descripcion">
+        🏆 Resuelve pistas, encuentra códigos ocultos y sé el primero en llegar al tesoro.
+    </p>
+
+    <div class="reto-mini-info">
+        <span>🕵️ Búsqueda real</span>
+        <span>🔐 Códigos secretos</span>
+        <span>🎁 Premios</span>
+    </div>
+
+    <div class="premios-panel">
+
+        <h3>🎯 Premio actual</h3>
+
+        <div class="premio-actual-reto">
+            💵 $5 en efectivo o transferencia
+        </div>
+
+        <h4>Próximos premios</h4>
+
+        <div class="lista-premios">
+
+            <div class="premio-bloqueado">
+                🔒 Entrega del Patrón
             </div>
-<div class="contador-jugadores">
-    👥 Jugadores activos: <strong id="contador-jugadores">0</strong>
+
+            <div class="premio-bloqueado">
+                🔒 Volquetero ($6)
+            </div>
+
+            <div class="premio-bloqueado">
+                🔒 Fotos con Spider-Man
+            </div>
+
+            <div class="premio-bloqueado">
+                🔒 $10 en efectivo o transferencia
+            </div>
+
+        </div>
+
+    </div>
+
+       <button class="btn-reto" onclick="toggleGanadores()">
+       🏆 Salón de Ganadores
+       </button>
+
+    <div id="ganadores-anteriores" class="ganadores-panel oculto">
+
+        <h3>Salón de Ganadores</h3>
+
+        <div class="ganador-item">
+            <span>Reto #1</span>
+            <strong>Pendiente</strong>
+        </div>
+
+        <div class="ganador-item">
+            <span>Reto #2</span>
+            <strong>Pendiente</strong>
+        </div>
+
+        <div class="ganador-item">
+            <span>Reto #3</span>
+            <strong>Pendiente</strong>
+        </div>
+
+        <div class="ganador-item">
+            <span>Reto #4</span>
+            <strong>Pendiente</strong>
+        </div>
+
+        <div class="ganador-item">
+            <span>Reto #5</span>
+            <strong>Pendiente</strong>
+        </div>
+
+    </div>
+
 </div>
-            <div class="reglas-reto">
-                <h3>Reglas del juego</h3>
-
-                <p>📍 Sigue las pistas hasta encontrar las tarjetas escondidas.</p>
-                <p>📱 Cada participante debe registrar los códigos desde su propio dispositivo.</p>
-                <p>🔐 Los códigos deben ingresarse en orden. No se pueden saltar etapas.</p>
-                <p>🏆 El premio será entregado al primer participante que complete correctamente todas las etapas.</p>
-
-                <div class="advertencia-reto">
-                    <strong>⚠️ ADVERTENCIA IMPORTANTE</strong>
-                    <p>
-                        Está prohibido retirar, ocultar, mover, dañar o alterar las tarjetas del reto.
-                        La persona que lo haga quedará inmediatamente descalificada y perderá el derecho
-                        a reclamar premios actuales y futuros.
-                    </p>
-                </div>
-
-                <p>🤝 Al participar aceptas respetar las reglas, los espacios públicos y a los demás jugadores.</p>
-            </div>
-
-            <button type="button" class="btn-reto" onclick="iniciarReto()">
-                Aceptar y comenzar la búsqueda
-            </button>
-        </div>
-
-        <div id="pantalla-juego" class="reto-card oculto">
-            <div class="progreso-reto">
-                <span id="paso1">1</span>
-                <span id="paso2">2</span>
-                <span id="paso3">3</span>
-                <span id="paso4">🏆</span>
-            </div>
-
-            <h2 id="titulo-etapa" class="section-title blanco">Etapa 1</h2>
-
-<p id="pista-actual" class="pista-texto">
-    El río será tu compañero en esta aventura.
-    Comienza donde muchos se toman fotos con algo que normalmente solo tienen las aves.
-</p>
-
-            <input id="codigo-input" class="codigo-input" type="text" placeholder="Ingresa el código encontrado">
-
-            <button type="button" class="btn-reto" onclick="validarCodigo()">
-                Desbloquear pista
-            </button>
-
-            <p id="mensaje-reto" class="mensaje-reto"></p>
-        </div>
-
-        <div id="pantalla-ganador" class="reto-card oculto">
-            <h2 class="section-title blanco">🏆 ¡Tesoro encontrado!</h2>
-
-            <p class="pista-texto">
-                Felicidades, completaste todas las etapas del reto.
-            </p>
-
-            <div class="premio-actual">
-                💵 Premio ganado: <strong>$5 en efectivo o transferencia</strong>
-            </div>
-
-<a class="btn-reto enlace-reto"
-   href="https://wa.me/593987828173?text=Hola,%20termin%C3%A9%20con%20%C3%A9xito%20la%20b%C3%BAsqueda%20del%20tesoro%20y%20acabo%20de%20registrar%20el%20%C3%BAltimo%20c%C3%B3digo.%0A%0AHe%20visitado:%0A1.%20Inicio%20del%20Malec%C3%B3n%20-%20alas%0A2.%20Redondel%20Jumandy%0A3.%20Parque%20de%20los%20Dinosaurios%0A4.%20Parque%20Lineal%20-%20letras%20TENA%0A%0AVengo%20a%20reclamar:%20%245%20en%20efectivo%20o%20transferencia."
-   target="_blank">
-    Reclamar premio por WhatsApp
-</a>
-        </div>
 
     </div>
 </section>
@@ -502,231 +515,41 @@
         <p>&copy; 2026 Ronmel Torres.</p>
     </footer>
 
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
-    import { getFirestore, collection, doc, setDoc, updateDoc, onSnapshot, query, where, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
-
-    const firebaseConfig = {
-        apiKey: "AIzaSyBpy_F0ADvxnEHKox1RpnXay9hpKJsnxbk",
-        authDomain: "ronmel-af340.firebaseapp.com",
-        projectId: "ronmel-af340",
-        storageBucket: "ronmel-af340.firebasestorage.app",
-        messagingSenderId: "83600208243",
-        appId: "1:83600208243:web:c1fc3922e80a76d0e9d506",
-        measurementId: "G-E49VTXWLXP"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-
-    const retoId = "reto-01";
-
-    const reto = {
-        nombre: "Reto Urbano #1",
-        premio: "$5 en efectivo o transferencia",
-
-        codigos: [
-            "RTA-01-A7K93",
-            "RTA-01-M4Q24",
-            "RTA-01-Z8P56",
-            "RTA-01-EX1T0"
-        ],
-
-        pistas: [
-`El río será tu compañero.
-
-La aventura comienza donde muchos buscan alas,
-aunque ninguno puede volar.
-
-Encuentra la primera señal.`,
-
-`Buen trabajo.
-
-Tu siguiente pista se encuentra cerca de un personaje tan conocido en la ciudad que incluso los buses llevan su nombre.
-
-La siguiente señal te espera cerca de él.`,
-
-`Excelente.
-
-Ahora viaja millones de años hacia el pasado.
-
-La señal se encuentra donde aún permanecen gigantes que dominaron la Tierra mucho antes que nosotros.`,
-
-`Has llegado a la última etapa.
-
-Seguiste huellas antiguas, leíste señales ocultas y dejaste que la ciudad te hablara en silencio.
-
-Ahora no busques en libros ni en leyendas: busca donde el nombre de la ciudad se escribe grande sin esconderse, pero solo lo encuentran quienes avanzan.
-
-Está entre pasos repetidos, respiraciones agitadas y rutas que no terminan en un solo punto.
-
-Allí, donde el camino sigue de largo, el tesoro te espera.`
-        ]
-    };
-
-    let etapaActual = Number(localStorage.getItem("retoEtapaActual")) || 0;
-    let retoIniciado = localStorage.getItem("retoIniciado") === "true";
-    let retoGanado = localStorage.getItem("retoGanado") === "true";
-
-    let participanteId = localStorage.getItem("participanteId");
-
-    function crearIdParticipante() {
-        return "P-" + Math.random().toString(36).substring(2, 8).toUpperCase();
-    }
-
-    async function registrarParticipante() {
-        if (!participanteId) {
-            participanteId = crearIdParticipante();
-            localStorage.setItem("participanteId", participanteId);
-        }
-
-        const ref = doc(db, "Participantes", participanteId);
-
-        await setDoc(ref, {
-            participanteId: participanteId,
-            retoId: retoId,
-            retoNombre: reto.nombre,
-            etapa: etapaActual + 1,
-            estado: "jugando",
-            premio: reto.premio,
-            fechaInicio: serverTimestamp(),
-            ultimaActividad: serverTimestamp()
-        }, { merge: true });
-    }
-
-    async function actualizarParticipante(etapa, estado = "jugando") {
-        if (!participanteId) return;
-
-        const ref = doc(db, "Participantes", participanteId);
-
-        await updateDoc(ref, {
-            etapa: etapa,
-            estado: estado,
-            ultimaActividad: serverTimestamp()
-        });
-    }
-
-    function escucharContadorJugadores() {
-        const q = query(
-            collection(db, "Participantes"),
-            where("retoId", "==", retoId)
-        );
-
-        onSnapshot(q, function(snapshot) {
-            const contador = document.getElementById("contador-jugadores");
-
-            if (contador) {
-                contador.textContent = snapshot.size;
-            }
-        });
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        cargarEstadoReto();
-        escucharContadorJugadores();
-    });
-
-    window.toggleSidebar = function () {
+    <script>
+    function toggleSidebar() {
         document.getElementById("sidebar").classList.toggle("active");
-    };
-
-    window.iniciarReto = async function () {
-        localStorage.setItem("retoIniciado", "true");
-        retoIniciado = true;
-
-        await registrarParticipante();
-
-        cargarEstadoReto();
-    };
-
-    function cargarEstadoReto() {
-        const pantallaReglas = document.getElementById("pantalla-reglas");
-        const pantallaJuego = document.getElementById("pantalla-juego");
-        const pantallaGanador = document.getElementById("pantalla-ganador");
-
-        if (retoGanado) {
-            pantallaReglas.classList.add("oculto");
-            pantallaJuego.classList.add("oculto");
-            pantallaGanador.classList.remove("oculto");
-            return;
-        }
-
-        if (!retoIniciado) {
-            pantallaReglas.classList.remove("oculto");
-            pantallaJuego.classList.add("oculto");
-            pantallaGanador.classList.add("oculto");
-            return;
-        }
-
-        pantallaReglas.classList.add("oculto");
-        pantallaJuego.classList.remove("oculto");
-        pantallaGanador.classList.add("oculto");
-
-        actualizarEtapa();
     }
 
-    function actualizarEtapa() {
-        document.getElementById("titulo-etapa").textContent = "Etapa " + (etapaActual + 1);
-        document.getElementById("pista-actual").textContent = reto.pistas[etapaActual];
+    function toggleMaterias() {
+        const seccion = document.getElementById("materias-tutorias");
 
-        for (let i = 1; i <= 4; i++) {
-            const paso = document.getElementById("paso" + i);
+        if (!seccion) {
+            console.log("No existe la sección materias-tutorias");
+            return;
+        }
 
-            if (paso) {
-                paso.classList.remove("activo");
+        seccion.classList.toggle("oculto");
 
-                if (i <= etapaActual) {
-                    paso.classList.add("activo");
-                }
-            }
+        if (!seccion.classList.contains("oculto")) {
+            setTimeout(() => {
+                seccion.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 100);
         }
     }
 
-    window.validarCodigo = async function () {
-        const input = document.getElementById("codigo-input");
-        const mensaje = document.getElementById("mensaje-reto");
+    function toggleGanadores() {
+        const panel = document.getElementById("ganadores-anteriores");
 
-        const codigoIngresado = input.value.trim().toUpperCase();
-        const codigoCorrecto = reto.codigos[etapaActual];
-
-        if (codigoIngresado === "") {
-            mensaje.textContent = "Ingresa un código para continuar.";
+        if (!panel) {
+            console.log("No existe el panel de ganadores");
             return;
         }
 
-        if (reto.codigos.includes(codigoIngresado) && codigoIngresado !== codigoCorrecto) {
-            mensaje.textContent = "Ese código pertenece a otra etapa. Debes seguir el orden de las pistas.";
-            return;
-        }
-
-        if (codigoIngresado !== codigoCorrecto) {
-            mensaje.textContent = "Código incorrecto. Revisa la tarjeta e intenta nuevamente.";
-            return;
-        }
-
-        etapaActual++;
-
-        if (etapaActual >= reto.codigos.length) {
-            localStorage.setItem("retoGanado", "true");
-            localStorage.setItem("retoEtapaActual", etapaActual);
-
-            retoGanado = true;
-
-            await actualizarParticipante(4, "finalizado");
-
-            cargarEstadoReto();
-            return;
-        }
-
-        localStorage.setItem("retoEtapaActual", etapaActual);
-
-        await actualizarParticipante(etapaActual + 1, "jugando");
-
-        input.value = "";
-        mensaje.textContent = "✅ Código correcto. Nueva pista desbloqueada.";
-
-        actualizarEtapa();
-    };
+        panel.classList.toggle("oculto");
+    }
 </script>
 </body>
 </html>
